@@ -3,6 +3,9 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => res.send('¡API de FlowTask funcionando!'));
+app.get('/tarea-ejemplo', (req, res) => {
+  const tarea = { id: 1, titulo: 'Instalar Node.js', completada: true };
+  res.json(tarea);
+});
 
 module.exports = app;
